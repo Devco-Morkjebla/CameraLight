@@ -1,5 +1,5 @@
 # CameraLight
-This programs purpose is to help ypur camera in dim or badly lit scenarios
+This programs purpose is to help your camera in dim or badly lit scenarios
 
 The program displays a warm bright border on your main monitor/screen
 
