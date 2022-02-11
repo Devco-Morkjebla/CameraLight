@@ -3,8 +3,7 @@ modeBool := False
 transCol := "FFFFFF"
 
 ; settings
-CoordMode, ToolTip, Screen
-Gui, +AlwaysOnTop -Caption -Border -Resize +E0x20 ; lets you click through gui
+Gui +AlwaysOnTop -Caption -Border -Resize +E0x20 ; lets you click through gui
 Gui, Color, %transCol%
 Gui, Add, Picture, x0 y0 w%A_ScreenWidth% h%A_ScreenHeight%, overlay.png
 
