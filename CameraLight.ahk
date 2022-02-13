@@ -1,11 +1,29 @@
 ; variables
 modeBool := False
 transCol := "FFFFFF"
+If (A_ScreenDPI > 0){
+    correction := 100
+    If (A_ScreenDPI > 110){
+        correction := 125
+        If (A_ScreenDPI > 135){
+            correction := 150
+            If (A_ScreenDPI > 160){
+                correction := 175
+                If (A_ScreenDPI > 185){
+                    correction := 200
+                }
+            }
+        }
+    }
+}
+scrnS := ((correction)/100)
+scrnH := A_ScreenHeight/scrnS
+scrnW := A_ScreenWidth/scrnS
 
 ; settings
 Gui +AlwaysOnTop -Caption -Border -Resize +E0x20 ; lets you click through gui
 Gui, Color, %transCol%
-Gui, Add, Picture, x0 y0 w%A_ScreenWidth% h%A_ScreenHeight%, overlay.png
+Gui, Add, Picture, x0 y0 w%scrnW% h%scrnH%, overlay.png
 
 ; hotkeys
 :*:bmode::
